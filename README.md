@@ -20,4 +20,7 @@ Within the Updraft Course, I have learned some basics of Solidity and created 3 
 - Demonstrated Ether transactions with `fund()` and `withdraw()` functions.
 - Utilized `AggregatorV3Interface` to interact with external contracts (e.g., Chainlink Price Feed).
 - Added comments (`//` and `/* */`) for code explanation, hints, and documentation.
-
+- To send eth from a contract to an address, we can use 
+-- `payable(msg.sender).transfer(this).balance;`
+-- `bool Success = payable(msg.sender).send(this).balance;`
+-- `(bool Success, ) = payable(msg.sender).call{value: address(this).balance}("");`
