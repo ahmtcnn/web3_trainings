@@ -1,38 +1,23 @@
-Within this updraft Course i have learned some basics of solidity and created 3 applications with the course which are : SimpleStorage, StorageFactory and Fundme. 
+### Updraft Course Summary
 
-As a summary:
+Within the Updraft Course, I have learned some basics of Solidity and created 3 applications:
 
-I have used pragma solidity ^0.8.18; to specify the version of Solidity your contract is compatible with.
-Importing External Contracts:
+1. **SimpleStorage**
+2. **StorageFactory**
+3. **FundMe**
 
-I have imported external contracts/interfaces using the import statement, such as AggregatorV3Interface from Chainlink and PriceConverter from your own file.
-Using Libraries:
+#### Summary of Learnings:
 
-I have utilized a library called PriceConverter to extend the functionality of uint256 values with custom functions.
-State Variables:
+- Used `pragma solidity ^0.8.18;` to specify Solidity version compatibility.
+- Imported external contracts/interfaces using the `import` statement (e.g., `AggregatorV3Interface` from Chainlink and `PriceConverter` from a custom file).
+- Utilized the `PriceConverter` library to extend functionality for `uint256` values.
+- Declared state variables like `public constant MINIMUM_USD` and `address public i_owner`.
+- Used mappings and arrays (`mapping(address => uint256) public addressToAmountFunded` and `address[] public funders`) for data storage.
+- Defined a constructor `constructor()` for initializing state variables upon contract deployment.
+- Implemented functions (`fund()`, `getVersion()`, `withdraw()`) with different access modifiers (`public`, `internal`, `external`).
+- Applied a custom modifier `onlyOwner` to restrict function access based on caller identity.
+- Handled errors with custom error definition (`error NotOwner()`) and `require` statements for conditions.
+- Demonstrated Ether transactions with `fund()` and `withdraw()` functions.
+- Utilized `AggregatorV3Interface` to interact with external contracts (e.g., Chainlink Price Feed).
+- Added comments (`//` and `/* */`) for code explanation, hints, and documentation.
 
-I have declared state variables like public constant MINIMUM_USD and address public i_owner.
-Mappings and Arrays:
-
-I have used a classic mapping mapping(address => uint256) public addressToAmountFunded and an array address[] public funders to store data.
-Constructors:
-
-I have defined a constructor constructor() to initialize state variables when the contract is deployed.
-Functions:
-
-I have implemented functions like fund(), getVersion(), and withdraw() with different access modifiers (public, internal, and external).
-Modifiers:
-
-I have used a custom modifier onlyOwner to restrict access to certain functions based on the caller's identity.
-Error Handling:
-
-I have defined a custom error using error NotOwner() and used require statements for conditions that must be met for function execution.
-Ether Transactions:
-
-I have demonstrated sending Ether with the fund() function and handling Ether balances with the withdraw() function.
-Interface Usage:
-
-I have used an interface AggregatorV3Interface to interact with an external contract (Chainlink Price Feed).
-Comments and Documentation:
-
-I have added comments (// and /* */) to explain code logic, provide hints, and document the purpose of functions and variables.
